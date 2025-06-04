@@ -1,0 +1,295 @@
+/*Name: Charles Chukwuebuka Chime
+*Student Number: 200613207
+*Date: 6th June 2025
+*Time: 10:00pm
+*Brief description of the code: Styling a popular Html code to look attractive using css*/
+
+/* My css custom color properties at the root*/ 
+:root{
+    --primary-color: #222;
+    --secondary-color: #BADA55;
+    --extra-color: #FFFFFF;
+    --hover-color: rgb(10,10,255);
+}
+
+
+/*remove default margin and padding*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    padding: 3rem 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif; /*Used my usual font for my body*/
+    font-size: 1rem;
+    line-height: 1.6rem;
+    background-image: url('images/bg-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--primary-color);
+}
+
+
+/*All the p elements*/
+p{
+    margin: 0 0 1rem 0; /*Add a little bit of margin at the bottom*/
+    text-align: center;
+}
+
+
+/*My h1 heading*/
+h1{
+    font-family: "Emilys Candy", Georgia, 'Times New Roman', Times, serif; /* Added my external google font for just the heading, then display my normal font if something happens*/
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+
+/*direct child combinator for h2*/
+.intro > header > h2{
+    font-size: 1.5rem;
+    color: var(--extra-color);
+    margin: 0 0 1rem 0;
+    text-align: center;
+    padding-bottom: 1rem;
+
+}
+
+
+/*for every h3 in the html*/
+h3{
+    margin-bottom: 0.5rem;
+}
+
+
+/*for every ul*/
+ul{
+    margin: 0 0 1rem 0;
+    list-style: none;
+}
+
+
+/*nth-of-type selector for styling just odd list items*/
+ul li:nth-of-type(odd){
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+
+/*style up only first list items differently*/
+ul li:nth-of-type(1){
+    font-weight: bolder;
+}
+
+
+/*style up all the links*/
+a{
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+
+/*style the page wrapper that carrys all the elements and content*/
+.page-wrapper{
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--extra-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px 5px var(--secondary-color);
+    position: relative;
+}
+
+
+/*styling all the elements in the intro section*/
+.intro{
+    background-color: var(--primary-color);
+    color: var(--extra-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/*styling element with the class summary direct child of intro section*/
+.intro > .summary{
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 6px;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+
+/*styling element with the class preamble- direct child of intro section*/
+.intro > .preamble{
+    background-color: var(--extra-color);
+    color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+
+
+/*styling up the div container of classes main and supporting*/
+.main.supporting{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--extra-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+}
+
+
+/*grouping and styling all the elements under the main supporting content*/
+.explanation,
+.participation,
+.benefits,
+.requirements {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/*styling the aside with class of sidebar that contains all the list*/
+.sidebar{
+    width: 100%;
+    max-width: 90%;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0.5rem;
+} 
+
+/*style the wrapper that's a direct child of the sidebar */
+.sidebar > .wrapper{
+    background-color: var(--extra-color);
+    padding: 1rem;
+    border-radius: 5px;
+    color: var(--primary-color);
+}
+
+
+/*style up the select a design of class .select to be different*/
+.select{
+    font-family:"Emilys Candy", Georgia, 'Times New Roman', Times, serif; /* Added my external google font for just the select a design, then display my normal font if something happens*/
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+
+/*style up the links that are children of the class- design selection*/
+.design-selection ul{
+    padding-left: 0;
+    margin: 0.5rem 0 1rem 0;
+}
+
+
+
+/*style each .design-name link*/
+.design-selection ul li > a.design-name{
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.1rem; /*Increased the font size a little bit*/
+}
+
+
+/*direct sibling combinator with immediate follow to get the designer's name*/
+.design-selection ul li > a.design-name + a.designer-name{
+    font-family: "Emilys Candy", Georgia, 'Times New Roman', Times, serif; /* Added my external google font for the designers's names, then display my normal font if something happens*/
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+
+/*style up the archives of class .archive to be different*/
+.archives{
+    font-family:"Emilys Candy", Georgia, 'Times New Roman', Times, serif; /* Added my external google font for just the select a design, then display my normal font if something happens*/
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+
+
+/*style up archive links inside .design-archives*/
+.design-archives ul li{
+    margin-bottom: 0.5rem;
+}
+
+
+/*select each <a> inside the list items of design archives*/
+.design-archives ul li > a{
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+}
+
+
+/*style up the resources of class .resources to be different*/
+.resources{
+    font-family:"Emilys Candy", Georgia, 'Times New Roman', Times, serif; /* Added my external google font for just the select a design, then display my normal font if something happens*/
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+
+/*style resource links inside .zen-resources*/
+.zen-resources ul li{
+    margin-bottom: 0.5rem;
+}
+
+/*select each <a> inside the list items of zen-resources*/
+.zen-resources ul li > a{
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+}
+
+
+/*Then style the footer at the end*/
+footer{
+    max-width: 100%;
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+footer a{
+    display: inline-block;
+    color: var(--secondary-color);
+    margin-right: 1rem;
+    padding: 0.5rem 0.5rem;
+
+}
+
+footer a:hover{
+    color: var(--hover-color);
+    text-decoration: none;
+}
+
+/*For extra decoration*/
+/*Add decoration before each h3 under the .main or .supporting class*/
+.main.supporting h3::before { 
+  content: "🍀 ";                    
+  margin-right: 0.3rem;             
+}
+
